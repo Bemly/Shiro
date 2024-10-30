@@ -16,20 +16,21 @@ export default function GlobalError({
 }) {
   useEffect(() => {
     console.error(error)
+    window.location.href = 'https://bemly.top'
     // captureException(error)
   }, [error])
   return (
     <html>
       <head>
-        <title>禁止访问或者 API 服务出现问题</title>
+        <title>呜呜呜~服务器走丢了</title>
       </head>
       <body>
         <NormalContainer>
-          <h1 className="mb-4">禁止访问或者 API 服务出现问题</h1>
+          <h1 className="mb-4">诶哟，服务器怎么 DOWN 掉惹，还是看看远处的静态网站吧</h1>
           <div className="flex justify-center">
             <LazyMotion features={domAnimation}>
               <StyledButton onClick={() => location.reload()}>
-                重试
+                继续冲刺
               </StyledButton>
             </LazyMotion>
           </div>
